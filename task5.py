@@ -1,4 +1,4 @@
-""""
+"""
 Employee Shift Manager
 You are asked to build a small program to help manage employee work shifts in a company.  
 Create a dictionary `shifts` where each key is an employee's name, and the value is a list of the days they are scheduled to work.  
@@ -24,3 +24,19 @@ The  function should
 
 Returns a list of employees working on that day.
 """
+
+
+def add_shift(employee, day):
+	shifts = {}
+
+	days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+	if day in days:
+		if employee in shifts:
+			shifts[employee].append(day)
+		else:
+			shifts.update({employee: [day]})
+	else:
+		return "Day provided not valid"
+
+	return shifts
+
