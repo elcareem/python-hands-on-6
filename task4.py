@@ -14,3 +14,19 @@ Expected Output:
 {'John': 'Present', 'Mary': 'Absent', 'Peter': 'Absent', 'Alice': 'Present'}
 
 """
+
+students = ["John", "Mary", "Peter", "Alice"]
+present_list = ["John", "Alice"]
+
+def check_attendance(students, present_list):
+	
+	attendance = {}
+	for student in students:
+		if student in present_list:
+			attendance.update({student: "Present"})
+		elif student not in present_list:
+	 		attendance.update({student: "Absent"})	
+
+	return attendance
+
+print(check_attendance(students, present_list))
