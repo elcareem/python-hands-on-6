@@ -17,12 +17,11 @@ def filter_transactions(transactions, criteria):
 					found.append(transaction)
 		
 	if found:
-		for i in found:
-			print(i)
+		return found
 	else:
-		print("Not found")
+		return "Not found"
 				
 
 
-criteria = {'amount': 100}
-filter_transactions(transactions, criteria)
+criteria = {'type': 'withdraw' }
+print(filter_transactions(transactions, criteria))
